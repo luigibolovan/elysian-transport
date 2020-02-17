@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="859.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.elysian.transport.ui.Controller">
+   <children>
+      <BorderPane prefHeight="407.0" prefWidth="859.0" style="-fx-background-color: #FFFFFF;">
+         <right>
+            <Pane prefHeight="407.0" prefWidth="351.0" style="-fx-background-color: #660000;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="113.0" fitWidth="92.0" layoutX="130.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/res/truck.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="102.0" layoutY="239.0" text="Transport broker" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </right>
+         <center>
+            <Pane onKeyPressed="#findByKey" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="palletTextField" layoutX="254.0" layoutY="93.0" prefHeight="25.0" prefWidth="218.0" promptText="Introdu numarul de paleti" />
+                  <ComboBox id="prioBox" fx:id="prioBox" layoutX="254.0" layoutY="149.0" prefHeight="25.0" prefWidth="219.0" promptText="Alege prioritatea" />
+                  <Label layoutX="27.0" layoutY="97.0" prefHeight="17.0" prefWidth="166.0" text="Numar paleti">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="151.0" text="Prioritate">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="findBtn" layoutX="192.0" layoutY="228.0" mnemonicParsing="false" onMouseClicked="#findResult" prefHeight="25.0" prefWidth="124.0" text="Cauta" textFill="#2c2929" />
+                  <Label fx:id="outputLabel" alignment="CENTER" layoutX="27.0" layoutY="305.0" prefHeight="19.0" prefWidth="455.0" textAlignment="CENTER" textFill="#660000">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Circle fx:id="exitBtn" fill="#c30a00" layoutX="27.0" layoutY="26.0" onMouseClicked="#onCircleClick" radius="6.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Label layoutX="43.0" layoutY="18.0" text="Iesire" />
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
