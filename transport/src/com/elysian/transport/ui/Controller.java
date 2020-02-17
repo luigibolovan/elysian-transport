@@ -28,7 +28,10 @@ public class Controller implements Initializable {
 
     @FXML
     private ComboBox<String> prioBox;
-    ObservableList<String> priorityOptions = FXCollections.observableArrayList("Foarte urgent", "Urgent", "Normal", "Ieftin");
+    private ObservableList<String> priorityOptions = FXCollections.observableArrayList("Foarte urgent",
+                                                                                        "Urgent",
+                                                                                        "Normal",
+                                                                                        "Ieftin");
 
     @FXML
     private Button findBtn;
@@ -51,7 +54,7 @@ public class Controller implements Initializable {
 
     @FXML
     void findResult(){
-            if(palletTextField.getText() == null || prioBox.getValue() == null){
+            if(palletTextField.getText() == null || prioBox.getValue() == null || palletTextField.getText().equals("")){
                 outputLabel.setText("Completeaza toate campurile!");
             }else{
                 broker.setCostCalculator(new DefaultCalculator());
