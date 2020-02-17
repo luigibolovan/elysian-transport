@@ -39,6 +39,7 @@ public class DefaultCalculator implements BrokerCalculator {
                 }
                 break;
             case 2:
+            case 3:
                 if(numberOfPallets > 1 && numberOfPallets <= 50) {
                     outputMessage = "Trenul este cea mai optima modalitate de transport. Cost: " + (COST_PALLET_TRAIN * numberOfPallets + COST_TRANSPORT_TRAIN);
                 }else if(numberOfPallets > 50){
@@ -47,12 +48,9 @@ public class DefaultCalculator implements BrokerCalculator {
                     outputMessage = "Masina este cea mai optima modalitate de transport. Cost: " + (COST_PALLET_CAR * numberOfPallets + COST_TRANSPORT_CAR);
                 }
                 break;
-            case 3:
-                outputMessage = "Vaporul este cea mai optima modalitate de transport. Cost: " + (COST_PALLET_SHIP * numberOfPallets + COST_TRANSPORT_SHIP);
-                break;
             default:
-                System.out.println("Nu reprezinta o prioritate");
-                System.exit(1);
+                outputMessage = "Nu reprezinta o prioritate";
+                break;
         }
         return outputMessage;
     }

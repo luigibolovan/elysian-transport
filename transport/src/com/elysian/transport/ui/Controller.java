@@ -59,27 +59,35 @@ public class Controller implements Initializable {
             }else{
                 broker.setCostCalculator(new DefaultCalculator());
 
-                int noOfPallets = Integer.parseInt(palletTextField.getText());
-                int prio = 4;
-                switch(prioBox.getValue())
-                {
-                    case "Foarte urgent":
-                        prio = 0;
-                        break;
-                    case "Urgent":
-                        prio = 1;
-                        break;
-                    case "Normal":
-                        prio = 2;
-                        break;
-                    case "Ieftin":
-                        prio = 3;
-                        break;
-                    default:
-                        break;
-                }
-                outputLabel.setText(broker.getMinimumCost(noOfPallets, prio));
+                try{
+                    int noOfPallets = Integer.parseInt(palletTextField.getText());
+                    int prio = 4;
+                    switch(prioBox.getValue())
+                    {
+                        case "Foarte urgent":
+                            prio = 0;
+                            break;
+                        case "Urgent":
+                            prio = 1;
+                            break;
+                        case "Normal":
+                            prio = 2;
+                            break;
+                        case "Ieftin":
+                            prio = 3;
+                            break;
+                        default:
+                            break;
+                    }
 
+                    if(noOfPallets > 0) {
+                        outputLabel.setText(broker.getMinimumCost(noOfPallets, prio));
+                    }else{
+                        outputLabel.setText("Numar de paleti invalid");
+                    }
+                }catch(NumberFormatException e){
+                    outputLabel.setText("Numarul de paleti contine litere sau caractere speciale");
+                }
             }
     }
 

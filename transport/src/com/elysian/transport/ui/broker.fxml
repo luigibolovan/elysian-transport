@@ -25,7 +25,7 @@
                   </ImageView>
                   <Label layoutX="102.0" layoutY="239.0" text="Transport broker" textFill="WHITE">
                      <font>
-                        <Font size="20.0" />
+                        <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
                </children>
@@ -51,8 +51,7 @@
                      <font>
                         <Font size="13.0" />
                      </font></Label>
-                  <Circle fx:id="exitBtn" fill="#c30a00" layoutX="27.0" layoutY="26.0" onMouseClicked="#onCircleClick" radius="6.0" stroke="WHITE" strokeType="INSIDE" />
-                  <Label layoutX="43.0" layoutY="18.0" text="Iesire" />
+                  <Circle fx:id="exitBtn" fill="#660000" layoutX="27.0" layoutY="26.0" onMouseClicked="#onCircleClick" radius="6.0" stroke="WHITE" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="2.0" />
                </children>
             </Pane>
          </center>
