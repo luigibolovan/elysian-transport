@@ -26,6 +26,7 @@ La final aplicatia(brokerul) spune userului cat va costa transportul si cu ce va
 ## Tools
 - IntelliJ Idea IDE
 - Java FX library
+- Scene Builder
 
 ## Gui
 Userul introduce numarul de paleti in text field si selecteaza una din prioritatile de transport din drop down. Dupa introducerea datelor, aplicatia va afisa sub butonul *Cauta* rezultatul calculului.
