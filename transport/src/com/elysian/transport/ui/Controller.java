@@ -6,7 +6,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -34,12 +33,9 @@ public class Controller implements Initializable {
                                                                                         "Ieftin");
 
     @FXML
-    private Button findBtn;
-
-    @FXML
     private Label outputLabel;
 
-    Broker broker = new Broker();
+    private Broker broker = new Broker();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -81,12 +77,12 @@ public class Controller implements Initializable {
                     }
 
                     if(noOfPallets > 0) {
-                        outputLabel.setText(broker.getMinimumCost(noOfPallets, prio));
+                        outputLabel.setText(broker.getBestTransport(noOfPallets, prio));
                     }else{
-                        outputLabel.setText("Numar de paleti invalid");
+                        outputLabel.setText("Numar de paleti invalid!");
                     }
                 }catch(NumberFormatException e){
-                    outputLabel.setText("Numarul de paleti contine litere sau caractere speciale");
+                    outputLabel.setText("Numarul de paleti trebuie sa fie alcatuit doar din cifre");
                 }
             }
     }

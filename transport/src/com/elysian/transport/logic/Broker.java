@@ -7,7 +7,7 @@ public class Broker{
         costCalculator = calculator;
     }
 
-    public String getMinimumCost(int numberOfPallets, int prio){
+    public String getBestTransport(int numberOfPallets, int prio){
        return costCalculator.findBestOption(numberOfPallets, prio);
     }
 }
