@@ -218,6 +218,20 @@ class BrokerTest {
         assertEquals(testBroker.getBestTransport(noOfPallets, prio), "Nu reprezinta o prioritate");
     }
 
+    @Test
+    void Should_ReturnInvalidNoOfPallets_When_0Pallets(){
+        int noOfPallets = 0;
+        int prio = 0;
+        assertEquals(testBroker.getBestTransport(noOfPallets, prio), "Numar de paleti invalid!");
+    }
+
+    @Test
+    void Should_ReturnInvalidNoOfPallets_When_NegativePallets(){
+        int noOfPallets = -2;
+        int prio = 0;
+        assertEquals(testBroker.getBestTransport(noOfPallets, prio), "Numar de paleti invalid!");
+    }
+
     private String setExpectedString(String transportName, final int transportCost, final int noOfPallets, final int palletCost){
         return transportName + " este cea mai optima modalitate de transport. Cost: " + (transportCost + noOfPallets * palletCost);
     }

@@ -76,11 +76,8 @@ public class Controller implements Initializable {
                             break;
                     }
 
-                    if(noOfPallets > 0) {
-                        outputLabel.setText(broker.getBestTransport(noOfPallets, prio));
-                    }else{
-                        outputLabel.setText("Numar de paleti invalid!");
-                    }
+                    outputLabel.setText(broker.getBestTransport(noOfPallets, prio));
+
                 }catch(NumberFormatException e){
                     outputLabel.setText("Numarul de paleti trebuie sa fie alcatuit doar din cifre");
                 }
