@@ -23,6 +23,10 @@ Viteza de transport e urmatoarea(la fel si costurile de transport, ordonate de l
 
 La final aplicatia(brokerul) spune userului cat va costa transportul si cu ce va fi efectuat.
 
+## Tools
+- IntelliJ Idea IDE
+- Java FX library
+
 ## Gui
 Userul introduce numarul de paleti in text field si selecteaza una din prioritatile de transport din drop down. Dupa introducerea datelor, aplicatia va afisa sub butonul *Cauta* rezultatul calculului.
 
