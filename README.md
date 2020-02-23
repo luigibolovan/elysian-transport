@@ -1,4 +1,4 @@
-## Mini aplicatie simplificata de calcul al costului pentru transportul unei cantitati de marfa intre A si B.
+# Mini aplicatie simplificata de calcul al costului pentru transportul unei cantitati de marfa intre A si B.
 
 Actorii principali sunt urmatorii :
 
